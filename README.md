@@ -1,5 +1,5 @@
 
-# 🔐 IAM Access Key Rotation Org-Wide using AWS Secrets Manager & Terraform
+# IAM Access Key Rotation Org-Wide using AWS Secrets Manager & Terraform
 
 This project automates **IAM access key rotation** for multiple users across **all member accounts in an AWS Organization**, using:
 
@@ -32,7 +32,7 @@ IAM-Key-Rotation-OrgWide/
 
 ---
 
-## 🧰 Prerequisites
+## Prerequisites
 
 - An AWS Organization with at least one **management account** and one or more **member accounts**
 - CLI access to both
@@ -44,7 +44,7 @@ IAM-Key-Rotation-OrgWide/
 
 ## 🔧 Step-by-Step Setup
 
-### 🧭 Step 1: Setup in Each **Member Account**
+### Step 1: Setup in Each **Member Account**
 
 1. **Clone this repo** in your local dev environment.
 2. Navigate to `IAM-Key-Rotation-OrgWide/member-account/`
@@ -64,7 +64,7 @@ Repeat this step for each member account you want to support.
 
 ---
 
-### 🧠 Step 2: Setup in the **Central Org Admin Account**
+### Step 2: Setup in the **Central Org Admin Account**
 
 1. Navigate to `IAM-Key-Rotation-OrgWide/central-admin/`
 2. Edit `terraform.tfvars` and update:
@@ -93,7 +93,7 @@ Repeat this step for each member account you want to support.
 
 ---
 
-## 🔁 Rotation Process
+## Rotation Process
 
 - Lambda runs and assumes cross-account role in each member account.
 - For each user listed, it:
@@ -104,7 +104,7 @@ Repeat this step for each member account you want to support.
 
 ---
 
-## 🧪 Manual Testing
+## Manual Testing
 
 Run this from the AWS CLI to trigger rotation:
 ```bash
